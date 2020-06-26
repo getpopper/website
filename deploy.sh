@@ -1,17 +1,37 @@
-#Copyright 2018 Google LLC
+#!/bin/sh
 #
-#Licensed under the Apache License, Version 2.0 (the "License");
-#you may not use this file except in compliance with the License.
-#You may obtain a copy of the License at
-#
-#    https://www.apache.org/licenses/LICENSE-2.0
-#
-#Unless required by applicable law or agreed to in writing, software
-#distributed under the License is distributed on an "AS IS" BASIS,
-#WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#See the License for the specific language governing permissions and
-#limitations under the License.
-#
-rm -rf public/
-HUGO_ENV="production" hugo --gc || exit 1
-s3deploy -source=public/ -region=eu-west-1 -bucket=bep.is -distribution-id=E8OKNT7W9ZYZ2 -path temp/td
+# taken from: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+set -e
+
+if [ "$(git status -s)" ]; then
+  echo "The working directory is dirty. Please commit any pending changes."
+  exit 1;
+fi
+
+GIT_SHA=$(git rev-parse --short HEAD)
+
+echo "Deleting old publication"
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+
+echo "Checking out master branch into public"
+git worktree add -B master public origin/master
+
+echo "Removing existing files"
+rm -rf public/*
+
+echo "Generating site"
+docker run --rm -it \
+  -v ${PWD}:/src \
+  -v ${PWD}/public:/target \
+  klakegg/hugo:0.67.0-ext
+
+echo "Updating master branch"
+cd public
+git add --all
+git commit -m "Publishing to master branch (${GIT_SHA})"
+
+echo "Pushing to github"
+git push --all
