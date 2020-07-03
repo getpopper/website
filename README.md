@@ -21,8 +21,17 @@ docker run --rm -it \
   klakegg/hugo:0.67.0-ext server
 ```
 
-To deploy the website:
+The above supports hot-reloading, so any change made to a file should 
+be reflected immediately (if no errors were generated).
+
+## Deploy
+
+Once changes are ready to be published, run:
 
 ```bash
 ./deploy.sh
 ```
+
+The above generates the static site, and pushes it to the `master` 
+branch, which is what github-pages reads in order to publish it to 
+<https://getpopper.github.io/website>
