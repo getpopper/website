@@ -1,0 +1,91 @@
+
+//
+// Top navbar
+//
+
+.td-navbar-cover {
+    background: $light;
+
+    @include media-breakpoint-up(md) {
+        background: transparent;
+
+        .brand-name {
+            display: flex;
+            position: absolute;
+            left: 0px;
+        }
+    }
+
+    &.navbar-bg-onscroll .nav-link {
+        opacity: inherit;
+    }
+}
+
+.td-navbar {
+    background: $light;
+    min-height: 4rem;
+    margin: 0;
+    z-index: 32;
+
+    .brand-name {
+        display: none;}
+
+    @include media-breakpoint-up(md) {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        text-transform: none;
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+
+        .nav-link {
+            display: inline-block;
+            margin-right: -30px;
+        }
+
+        .navbar-logo {
+            svg {
+                display: inline-block;
+                height: 50px;
+
+                @include media-breakpoint-down(md) {
+                    left: 16px;
+                    width: 80px;
+                    height: auto;
+                    padding: 6px;
+                }
+            }
+        }
+    }
+
+    .navbar-text { 
+        color: $navbar-dark-color; 
+    } 
+
+    .nav-link {
+        text-transform: none;
+        font-weight: $font-weight-bold;
+    }
+
+    .td-search-input {
+        border: none;
+
+        @include placeholder {
+            color: $navbar-dark-color;
+        }
+    }
+
+    .dropdown {
+        min-width: 100px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-right: .5rem;
+        padding-left: .75rem;
+        align-items: flex-end;
+    }
+}

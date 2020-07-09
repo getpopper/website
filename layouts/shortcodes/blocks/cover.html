@@ -1,0 +1,17 @@
+{{ $col_id := .Get "color" | default "dark" }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
+{{ $height := .Get "height" | default "max"  }}
+<section class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--light -bg-{{ $col_id }}">
+  <div class="container td-overlay__inner">
+    <div class="row align-items-end">
+      <div class="col-12 pt-3 text-center">
+        <h1 class="display-1 mt-0 pb-3">
+          <img src="images/popper_logo_just_jug.png" width="74" valign="middle" alt="Popper"/> Popper
+        </h1>
+          <div class="pt-3 lead text-center">
+              {{ .Inner }}
+            </div>  
+      </div>
+    </div>
+  </div>
+</section>
