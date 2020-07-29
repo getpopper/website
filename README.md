@@ -7,7 +7,7 @@ providing easy site navigation, structure, and more. You can find
 detailed theme instructions in the Docsy user guide at 
 <https://docsy.dev/docs>
 
-This website is hosted at <https://getpopper.github.io/website>.
+This website is hosted at <https://getpopper.io>.
 
 ## Running the website locally
 
@@ -34,4 +34,4 @@ Once changes are ready to be published, run:
 
 The above generates the static site, and pushes it to the `master` 
 branch, which is what github-pages reads in order to publish it to 
-<https://getpopper.github.io/website>
+<https://getpopper.io>
