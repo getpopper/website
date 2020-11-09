@@ -28,15 +28,15 @@ pygmentsStyle = "tango"
 # Nav var
 [[menu.main]]
     name = "Blog"
-    weight = 30
+    weight = 50
     url = "https://medium.com/getpopper"
 [[menu.main]]
     name = "GitHub"
-    weight = 40
+    weight = 60
     url = "https://github.com/getpopper/"
 [[menu.main]]
     name = "Documentation"
-    weight = 50
+    weight = 70
     url = "https://popper.readthedocs.io/en/latest/"
 
 
