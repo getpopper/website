@@ -5,7 +5,7 @@ represents an overarching goal for the community.
 
 ## Optimize Onboarding Experience for Users
 
-> Github tag: `user-onboarding-experience`
+> Github tag: `br:user-onboarding-xp`
 
 Refine the current onboarding experience, and provide the community 
 with clear paths to get involved, and remain as active members.
@@ -25,7 +25,7 @@ with clear paths to get involved, and remain as active members.
 
 ## Content Delivery
 
-> Github tag: `content-delivery`
+> Github tag: `br:content-delivery`
 
 Streamline the creation and sharing of content to bring new members, 
 as well as creating a catalog of curated knowledge.
