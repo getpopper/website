@@ -13,7 +13,7 @@ with clear paths to get involved, and remain as active members.
 ### Key Initiatives
 
   * Value proposition for new users.
-  * Organize hands-on tutorials.
+  * Organize hands-on tutorials and contests (give away swag).
   * Instrumentation of CLI to request feedback.
   * User testing with new users.
   * Clear image and workflow catalog
