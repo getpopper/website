@@ -11,10 +11,8 @@ High-level description:
     in [this source file](../layouts/community/list.html) and are 
     publicly accessible in <https://getpopper.io/community>.
   * [Goals](./big-rocks.md). The larger goals for our CM work.
-  * [Personas](./personas.md). They represent distinct points of view 
-    within our community.
   * [PM Tool][ghp]. A Github project that contains CM-related tasks. 
-    Each card (or issue) has an owner and at least big rock, persona 
-    and quarter tags.
+    Each card (or issue) has an owner, and is tagged with the big rock 
+    and quarter they correspond to.
 
 [ghp]: https://github.com/orgs/getpopper/projects/1
